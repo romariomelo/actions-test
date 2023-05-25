@@ -40,10 +40,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Connect to PostgreSQL
+      - name: Migration Run
         # Runs a script that creates a PostgreSQL table, populates
         # the table with data, and then retrieves the data
-        run: npm run typeorm migration:run -- -d ./datasource.ts
+        run: npm run typeorm migration:run -- -d ./datasource.test.ts
 
       - name: Connect to PostgreSQL
         # Runs a script that creates a PostgreSQL table, populates
