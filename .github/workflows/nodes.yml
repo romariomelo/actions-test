@@ -1,0 +1,17 @@
+name: Teste
+
+on:
+  workflow_dispatch:
+
+jobs:
+  teste:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 100
+
+      - name: Setup database
+        run: |
+          docker compose -f docker-compose-nodes.yml up
