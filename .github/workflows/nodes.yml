@@ -1,4 +1,4 @@
-name: Teste
+name: Nodes
 
 on:
   workflow_dispatch:
